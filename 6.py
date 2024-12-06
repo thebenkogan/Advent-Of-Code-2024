@@ -26,7 +26,7 @@ print(len(pos))
 total = 0
 for y, line in enumerate(grid):
     for x, c in enumerate(line):
-        if grid[y][x] != ".":
+        if c != "." or (x, y) not in pos:
             continue
         grid[y][x] = "#"
 
